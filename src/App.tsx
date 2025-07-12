@@ -292,9 +292,6 @@ END:VCARD`;
         }
     };
 
-    // Removed unused resetForm
-
-    // Removed unused handlePhoneChange
 
     const handleAmountChange = (value: string): void => {
         // Allow only numbers and decimal point
@@ -366,11 +363,11 @@ END:VCARD`;
                                 </Box>
                                 {/* ColorPicker will be rendered below QR code on mobile, here only for desktop */}
                                 <Box
-                                    mt={{ xs: 0, md: 5 }}
+                                    mt={{ xs: 0, md: 4 }}
                                     sx={{
                                         display: { xs: 'none', md: 'block' },
-                                        maxWidth: { md: 320 },
-                                        mx: { md: 0 },
+                                        maxWidth: { md: 450 },
+                                        mx: { md: 5 },
                                         mb: { md: 0 },
                                         zIndex: 1,
                                         position: 'relative',
