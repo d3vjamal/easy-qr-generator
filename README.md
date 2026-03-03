@@ -1,34 +1,99 @@
-# QR Code Generator
+# Easy QR Generator
 
-Welcome to the QR Code Generator! This tool makes it easy to create your own custom QR codes for websites, contact information, Wi-Fi networks, and more. Whether you're a business owner, a student, or just someone who loves technology, this application is designed for you.
+> Generate custom QR codes instantly — free, no login, no data stored.
 
-## What Can You Do?
+A fast and fully client-side QR code generator that supports multiple QR types, real-time preview, custom colors, center icons, and PNG download.
 
-- **Create Different Types of QR Codes**:
-  - **Website Links**: Share a link to your favorite website, blog, or social media profile.
-  - **Plain Text**: Encode a simple message or note.
-  - **Contact Information**: Share your contact details in a scannable format.
-  - **UPI Payments**: Generate QR codes for easy UPI transactions.
-  - **Wi-Fi Access**: Let guests connect to your Wi-Fi without typing passwords.
-  - **WhatsApp Messages**: Create a link that opens a WhatsApp chat with a pre-filled message.
+---
 
-- **Make It Your Own**:
-  - **Colors**: Change the colors of your QR code to match your brand or style.
-  - **Size**: Adjust the size to fit your needs.
-  - **Add a Logo**: Place your own logo or a fun icon in the middle of the QR code.
+## Features
 
-- **Easy to Use**:
-  - **Live Preview**: See your QR code change in real-time as you customize it.
-  - **Download and Share**: Save your QR code as an image or copy the information to share it anywhere.
-  - **Works Everywhere**: The app is designed to look great and work perfectly on your phone, tablet, or computer.
+### QR Code Types
+| Type | What it encodes |
+|------|----------------|
+| **URL** | Any website link (auto-prepends `https://`) |
+| **Text** | Plain text or any string |
+| **Contact** | vCard 3.0 — name, phone, email, org, URL |
+| **UPI Pay** | `upi://pay` deep-link for Indian payment apps |
+| **WiFi** | WPA/WEP/open network credentials |
+| **WhatsApp** | `wa.me` link with optional pre-filled message |
 
-## How to Use It
+### Customisation
+- **Foreground & background colors** — full color picker
+- **Size** — adjustable via slider
+- **Error correction level** — L / M / Q / H
+- **Center icon** — pick from built-in icons (WiFi, WhatsApp, Phone, Email, Link) or upload your own image
 
-1.  **Select a QR Code Type**: Choose what you want your QR code to do from the tabs at the top.
-2.  **Fill in the Details**: Enter the information you want to share.
-3.  **Customize Your QR Code**: Play with the colors, size, and logo until you're happy with the result.
-4.  **Download or Copy**: Click the download button to save your QR code, or copy the data to your clipboard.
+### General
+- Live QR preview that updates as you type
+- Download as PNG
+- Copy encoded data to clipboard
+- Bilingual UI — English 🇺🇸 and Bengali 🇧🇩
+- Fully client-side — nothing is sent to any server
+- Responsive — works on mobile, tablet, and desktop
 
-## About the Developer
+---
 
-This application was created with ❤️ by **@d3vjamal**.
+## Tech Stack
+
+| Layer | Library / Tool |
+|-------|---------------|
+| Framework | [React 19](https://react.dev) + TypeScript |
+| Build | [Vite 5](https://vitejs.dev) |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com) via `@tailwindcss/vite` |
+| UI Primitives | [Radix UI](https://www.radix-ui.com) |
+| QR Engine | [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) |
+| Icons | [Lucide React](https://lucide.dev) |
+
+---
+
+## Getting Started
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Start dev server
+npm run dev
+
+# 3. Build for production
+npm run build
+```
+
+---
+
+## Project Structure
+
+```
+src/
+├── App.tsx                  # Root state, QR generation logic, layout
+├── Header.tsx               # Top navigation bar
+├── QrCodeDisplay.tsx        # Live QR preview + download / copy actions
+├── QrUrlForm.tsx            # URL tab form
+├── QrTextForm.tsx           # Text tab form
+├── QrContactForm.tsx        # Contact / vCard form
+├── QrUpiForm.tsx            # UPI payment form
+├── QrWifiForm.tsx           # WiFi credentials form
+├── QrWhatsappForm.tsx       # WhatsApp link form
+├── ColorPicker.tsx          # Foreground + background color pickers
+├── AppearanceSettings.tsx   # Size and error-correction controls
+├── IconPicker.tsx           # Center icon selector + file upload
+├── AboutMe.tsx / AboutMePage.tsx
+├── TRANSLATIONS.ts          # i18n strings (en-US, bn-BD)
+└── globals.css              # Tailwind base + custom animations
+
+public/
+├── logo.svg                 # App logo (also used as favicon)
+└── icons/                   # Built-in center-icon options
+    ├── wifi.svg
+    ├── whatsapp.svg
+    ├── phone.svg
+    ├── email.svg
+    └── link.svg
+```
+
+---
+
+## Developer
+
+Built with ❤️ by **Jamaluddin Mondal** — [@d3vjamal](https://www.linkedin.com/in/d3vjamal)

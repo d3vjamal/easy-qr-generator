@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="gMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="gAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="gPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c026d3"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100" height="100" rx="18" fill="white"/>
+
+  <!-- TL Finder Pattern -->
+  <rect x="7" y="7" width="30" height="30" rx="5" fill="url(#gMain)"/>
+  <rect x="12" y="12" width="20" height="20" rx="3" fill="white"/>
+  <rect x="16" y="16" width="12" height="12" rx="2" fill="url(#gMain)"/>
+
+  <!-- TR Finder Pattern -->
+  <rect x="63" y="7" width="30" height="30" rx="5" fill="url(#gAccent)"/>
+  <rect x="68" y="12" width="20" height="20" rx="3" fill="white"/>
+  <rect x="72" y="16" width="12" height="12" rx="2" fill="url(#gAccent)"/>
+
+  <!-- BL Finder Pattern -->
+  <rect x="7" y="63" width="30" height="30" rx="5" fill="url(#gPink)"/>
+  <rect x="12" y="68" width="20" height="20" rx="3" fill="white"/>
+  <rect x="16" y="72" width="12" height="12" rx="2" fill="url(#gPink)"/>
+
+  <!-- Top timing strip (between TL and TR) -->
+  <rect x="41" y="9"  width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="50" y="9"  width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="41" y="18" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="50" y="18" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="41" y="27" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="50" y="27" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+
+  <!-- Left timing strip (between TL and BL) -->
+  <rect x="9"  y="41" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="18" y="41" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="9"  y="50" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="18" y="50" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="9"  y="59" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="18" y="59" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+
+  <!-- Center & right data modules -->
+  <rect x="41" y="41" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="50" y="41" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="59" y="41" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+  <rect x="68" y="41" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="77" y="41" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="86" y="41" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+
+  <rect x="41" y="50" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="59" y="50" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="77" y="50" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+  <rect x="86" y="50" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+
+  <rect x="41" y="59" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+  <rect x="50" y="59" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="68" y="59" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="86" y="59" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+
+  <rect x="41" y="68" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="50" y="68" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+  <rect x="59" y="68" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="68" y="68" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+  <rect x="77" y="68" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="86" y="68" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+
+  <rect x="41" y="77" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="59" y="77" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="77" y="77" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+  <rect x="86" y="77" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+
+  <rect x="41" y="86" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="50" y="86" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="59" y="86" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+  <rect x="68" y="86" width="6" height="6" rx="1.5" fill="url(#gAccent)"/>
+  <rect x="77" y="86" width="6" height="6" rx="1.5" fill="url(#gMain)"/>
+  <rect x="86" y="86" width="6" height="6" rx="1.5" fill="url(#gPink)"/>
+</svg>

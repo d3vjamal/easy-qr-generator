@@ -1,59 +1,87 @@
 import React from 'react';
-import './About.css';
 import profilePhoto from './assets/d3vjamal.jpg';
-import { Typography } from '@mui/material';
-import { FacebookIcon, Heart, Linkedin, LinkedinIcon, MailIcon } from 'lucide-react';
-import TRANSLATIONS from './TRANSLATIONS';
-
-// Add type for TRANSLATIONS with index signature for type safety
-type TranslationDict = {
-    [key: string]: { [key: string]: string };
-};
-const TRANSLATIONS_TYPED: TranslationDict = TRANSLATIONS;
+import { FacebookIcon, LinkedinIcon, MailIcon, Code2 } from 'lucide-react';
 
 const AboutMe: React.FC = () => {
-    // Set locale, fallback to 'en-US'
-    const locale = navigator.language || 'en-US';
-
-    // Translation function
-    const t = (key: string): string => {
-        return TRANSLATIONS_TYPED[locale]?.[key] || TRANSLATIONS_TYPED['en-US'][key] || key;
-    };
-
     return (
-        <section className="about-me">
-            <img src={profilePhoto} alt="Profile of Jamaluddin Mondal" className="profile-photo small" />
-            <div className="about-text">
-                <h2>About Me</h2>
-                <p>
-                    I’m passionate about web development, programming, and all things tech. With a strong background in backend engineering, I enjoy building scalable and efficient applications. Outside of work, I’m a movie enthusiast and a food lover.<br /><br />
-                    Feel free to get in touch — I’m open to exciting opportunities and collaborations!
-                </p>
-                <p className="contact-info">
+        <div className="max-w-2xl mx-auto space-y-4 animate-fade-in-up">
+            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-sm bg-card">
+                {/* Gradient banner */}
+                <div className="h-28 bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 animate-gradient-shift relative">
+                    <div className="absolute inset-0 opacity-20" style={{
+                        backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 50%, white 1px, transparent 1px)',
+                        backgroundSize: '30px 30px'
+                    }} />
+                </div>
 
-                    <Typography variant="body2">
+                <div className="px-6 pb-6">
+                    {/* Avatar */}
+                    <div className="relative -mt-12 mb-4 w-fit">
+                        <div className="w-[72px] h-[72px] rounded-2xl border-4 border-card overflow-hidden shadow-lg ring-2 ring-violet-500/30">
+                            <img
+                                src={profilePhoto}
+                                alt="Profile of Jamaluddin Mondal"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
 
-                        <a href="https://www.facebook.com/d3vjamal" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <FacebookIcon style={{ fontSize: 16 }} />
+                    {/* Info */}
+                    <div className="mb-4">
+                        <h2 className="text-xl font-bold text-foreground">Jamaluddin Mondal</h2>
+                        <p className="text-sm text-muted-foreground flex items-center gap-1.5 mt-0.5">
+                            <Code2 className="w-3.5 h-3.5" />
+                            @d3vjamal · Full-Stack Developer
+                        </p>
+                    </div>
+
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                        I'm passionate about web development, programming, and all things tech.
+                        With a strong background in backend engineering, I enjoy building scalable
+                        and efficient applications. Outside of work, I'm a movie enthusiast and a
+                        food lover.
+                        <br /><br />
+                        Feel free to get in touch — I'm open to exciting opportunities and collaborations!
+                    </p>
+
+                    {/* Social Links */}
+                    <div className="flex flex-wrap gap-2">
+                        <a
+                            href="https://www.facebook.com/d3vjamal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-muted/50 border border-border/50 text-muted-foreground hover:text-violet-700 dark:hover:text-violet-400 hover:border-violet-300 dark:hover:border-violet-700/60 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all"
+                        >
+                            <FacebookIcon className="w-3.5 h-3.5" />
+                            Facebook
                         </a>
-                        &nbsp;&nbsp;
-
-                        <a href="https://www.linkedin.com/in/d3vjamal" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <LinkedinIcon style={{ fontSize: 16 }} />
+                        <a
+                            href="https://www.linkedin.com/in/d3vjamal"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-muted/50 border border-border/50 text-muted-foreground hover:text-violet-700 dark:hover:text-violet-400 hover:border-violet-300 dark:hover:border-violet-700/60 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all"
+                        >
+                            <LinkedinIcon className="w-3.5 h-3.5" />
+                            LinkedIn
                         </a>
-                        &nbsp;&nbsp;
-
-                        <a href="mailto:d3v.jamal@gmail.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <MailIcon style={{ fontSize: 16 }} />
+                        <a
+                            href="mailto:d3v.jamal@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-muted/50 border border-border/50 text-muted-foreground hover:text-violet-700 dark:hover:text-violet-400 hover:border-violet-300 dark:hover:border-violet-700/60 hover:bg-violet-50 dark:hover:bg-violet-500/10 transition-all"
+                        >
+                            <MailIcon className="w-3.5 h-3.5" />
+                            Email
                         </a>
-
-                    </Typography>
-
-                </p>
-
+                    </div>
+                </div>
             </div>
 
-        </section >
+            {/* Built with badge */}
+            <p className="text-center text-xs text-muted-foreground/60">
+                Built with React + Vite + TailwindCSS
+            </p>
+        </div>
     );
 };
 
